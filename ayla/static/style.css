@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border: 2px solid;
+    padding: 1em 2em;
+}
