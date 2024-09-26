@@ -1,27 +1,12 @@
-import os
-
+from os import path_join
+from db import close_db
 from flask import Flask
-from . import db, home
 
 def create_app(test_config=None):
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-            SECRET_KEY='dev',
-            DATABASE=os.path.join(app.instance_path, 'ayla.sqlite')
-    )
+    app = Flask(__name__)
 
-    if test_config is None:
-        app.config.from_pyfile('config.py', silent=True)
-    else:
-        app.config.from_mapping(test_config)
-
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
+    app.teardown_appcontext(close_db)
 
     app.register_blueprint(home.bp)
 
-    db.init_app(app)
-    print(app.config)
     return app
