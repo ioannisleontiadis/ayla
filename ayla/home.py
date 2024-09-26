@@ -22,7 +22,10 @@ def get_home():
             semester
         ORDER BY 
             semester;"""
-    db = get_db()
-    semester_stats = db.execute(per_semester_query).fetchall()
+    try:
+        db = get_db()
+        semester_stats = db.execute(per_semester_query).fetchall() or None
+    except:
+        pass
     return render_template('home/home.html', stats=semester_stats)
 
