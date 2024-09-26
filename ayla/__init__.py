@@ -1,5 +1,5 @@
-from db import close_db
 from flask import Flask
+from . import db
 
 def create_app(test_config=None):
     app = Flask(__name__)
