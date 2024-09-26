@@ -1,5 +1,6 @@
 from flask import Blueprint, redirect, render_template, url_for, request, g
 from ayla.db import get_db
+import psycopg2.extras
 
 bp = Blueprint('home', __name__)
 
@@ -23,7 +24,7 @@ def get_home():
         ORDER BY 
             semester;"""
     conn = get_db()
-    cur = conn.cursor()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute(per_semester_query)
     semester_stats = cur.fetchall()
     return render_template('home/home.html', stats=semester_stats)
