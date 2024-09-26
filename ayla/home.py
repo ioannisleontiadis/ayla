@@ -17,7 +17,7 @@ def get_home():
             COUNT(CASE WHEN grade IS NULL THEN 1 END) AS remaining,
             COUNT(CASE WHEN lab = '1' THEN 1 END) AS lab
         FROM 
-            course
+            courses
         GROUP BY 
             semester
         ORDER BY 
