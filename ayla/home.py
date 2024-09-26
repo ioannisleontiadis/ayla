@@ -25,5 +25,5 @@ def get_home():
     conn = get_db()
     cur = conn.cursor()
     cur.execute(per_semester_query)
-    semester_stats = cur.fetchall
+    semester_stats = cur.fetchall()
     return render_template('home/home.html', stats=semester_stats)
