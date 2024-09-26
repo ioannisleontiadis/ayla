@@ -23,5 +23,5 @@ def create_app(test_config=None):
     app.register_blueprint(home.bp)
 
     db.init_app(app)
-    console.log(app.config)
+    print(app.config)
     return app

@@ -12,8 +12,8 @@ def init_app(app):
     app.teardown_appcontext(close_db)
 
 def get_db():
-    console.log("get_db()")
-    console.log(g)
+    print("get_db()")
+    print(g)
     if 'db' not in g:
         g.db = psycopg2.connect(
                 host=os.environ['PGHOST'],
@@ -25,8 +25,8 @@ def get_db():
     return g.db
 
 def close_db(e=None):
-    console.log("closing db")
+    print("closing db")
     db = g.pop('db', None)
-    console.log(db)
+    print(db)
     if db is not None:
         db.close()
