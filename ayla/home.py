@@ -24,5 +24,6 @@ def get_home():
             semester;"""
     cur = get_db().cursor()
     semester_stats = cur.execute(per_semester_query).fetchall() or None
+    cur.close();
     return render_template('home/home.html', stats=semester_stats)
 
