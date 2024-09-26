@@ -5,10 +5,10 @@ from flask import g
 def get_db():
     if 'db' not in g:
         g.db = psycopg2.connect(
-                host=os.environ['PGHOST'],
-                database=os.environ['PGDATABASE'],
-                user=os.environ['PGUSER'],
-                password=os.environ['PGPASSWORD']
+                host=environ['PGHOST'],
+                database=environ['PGDATABASE'],
+                user=environ['PGUSER'],
+                password=environ['PGPASSWORD']
         )
 
     return g.db

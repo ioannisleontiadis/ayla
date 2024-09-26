@@ -1,4 +1,3 @@
-from os import path_join
 from db import close_db
 from flask import Flask
 
