@@ -11,10 +11,10 @@
 </tr>
 {% for stat in stats %}
 <tr>
-    <td>{{ stat.semester }}</td>
-    <td><progress value={{ stat.progress }} max="100"> {{ stat.progress }} %</progress></td>
-    <td>{{ stat.remaining }} ({{ stat.lab }})</td>
-    <td>{{ stat.average }}</td>
+    <td>{{ stat['semester'] }}</td>
+    <td><progress value={{ stat['progress'] }} max="100"> {{ stat['progress'] }} %</progress></td>
+    <td>{{ stat['remaining'] }} ({{ stat['lab'] }})</td>
+    <td>{{ stat['average'] }}</td>
 </tr>
 {% endfor %}
 </table>
