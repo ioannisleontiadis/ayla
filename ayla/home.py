@@ -15,7 +15,7 @@ def get_home():
             ROUND(COUNT(CASE WHEN grade IS NOT NULL THEN 1 END) * 100.0 / COUNT(*), 2) AS progress,
             ROUND(SUM(CASE WHEN grade IS NOT NULL THEN grade * coeff ELSE 0 END) / SUM(CASE WHEN grade IS NOT NULL THEN coeff ELSE 0 END),2) AS average,
             COUNT(CASE WHEN grade IS NULL THEN 1 END) AS remaining,
-            COUNT(CASE WHEN lab = '1' THEN 1 END) AS lab
+            COUNT(CASE WHEN has_lab = '1' THEN 1 END) AS lab
         FROM 
             courses
         GROUP BY 
