@@ -1,1 +1,1 @@
-web: gunicorn ayla:app
+web: gunicorn ayla:create_app
