@@ -22,6 +22,7 @@ def get_home():
             semester
         ORDER BY 
             semester;"""
+    test = None or False
     cur = get_db().cursor()
     semester_stats = cur.execute(per_semester_query).fetchall() or None
     cur.close();
