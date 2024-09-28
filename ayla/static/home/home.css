@@ -1,0 +1,9 @@
+#content {
+    display: grid;
+    justify-content: center;
+}
+
+#greeting {
+    font-size: 5em;
+    text-align: center;
+}
