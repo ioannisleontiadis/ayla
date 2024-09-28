@@ -6,12 +6,15 @@
 {% block content %}
 <h1 id="greeting">Hi, this is Ayla!</h1>
 <table id="per_semester_stats">
+<thead>
 <tr>
     <th>Semester</th>
     <th>Progress</th>
     <th>Remaining (Lab)</th>
     <th>Avergage</th>
 </tr>
+</thead>
+<tbody>
 {% for stat in stats %}
 <tr>
     <td>{{ stat['semester'] }}</td>
@@ -20,5 +23,6 @@
     <td>{{ stat['average'] }}</td>
 </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endblock %}
