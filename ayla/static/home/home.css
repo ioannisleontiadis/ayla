@@ -17,10 +17,10 @@
     border-bottom: 1px solid black;
 }
 
-#per_semester_stats tr:first-child td {
-    padding-top: 4px;
+#per_semester_stats thead tr:first-child td {
+    padding-top: 20px;
 }
 
 #per_semester_stats tbody td {
-    padding: 2px 0;
+    padding: 10px 0;
 }
