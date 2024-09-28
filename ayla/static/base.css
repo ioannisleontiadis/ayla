@@ -1,0 +1,11 @@
+body {
+    font-family: Palatino;
+}
+
+nav {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}

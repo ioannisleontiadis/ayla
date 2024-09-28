@@ -1,9 +1,14 @@
 <!doctype html>
 <title>Ayla</title>
 <head>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
 {% block stylesheet %} {% endblock %}
 </head>
-<section class="content">
+<nav>
+    <a href="test">One</a>
+    <a href="test">Two</a>
+    <a href="test">Three</a>
+</nav>
+<section id="content">
 {% block content %} {% endblock %}
 </section>

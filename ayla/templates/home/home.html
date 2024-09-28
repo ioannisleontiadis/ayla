@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
+{% endblock %}
 {% block content %}
-<h1>Hi, this is Ayla!</h1>
-<table>
+<h1 id="greeting">Hi, this is Ayla!</h1>
+<table id="per_semester_stats">
 <tr>
     <th>Semester</th>
     <th>Progress</th>
