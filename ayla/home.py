@@ -5,10 +5,6 @@ import psycopg2.extras
 bp = Blueprint('home', __name__)
 
 @bp.route('/', methods=['GET'])
-def redirect_to_home():
-    return redirect(url_for('home.get_home'))
-
-@bp.route('/home', methods=['GET'])
 def get_home():
     per_semester_query = """
         SELECT 
