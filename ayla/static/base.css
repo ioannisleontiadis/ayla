@@ -4,8 +4,11 @@ body {
 
 nav {
     background-color: black;
+    height: 20px;
+    padding: 1em 0;
 }
 
 nav a {
     color: white;
+    padding: 0 2em;
 }
