@@ -7,3 +7,16 @@
     font-size: 5em;
     text-align: center;
 }
+
+#per_semester_stats {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#per_semester_stats th {
+    border-bottom: 1px solid black;
+}
+
+#per_semester_stats tr {
+    margin: 4px 0;
+}
