@@ -8,8 +8,8 @@ def get_db():
                 host=environ['PGHOST'],
                 database=environ['PGDATABASE'],
                 user=environ['PGUSER'],
-                password=environ['PGPASSWORD']
-        )
+                password=environ['PGPASSWORD'],
+                port=environ['PGPORT'])
 
     return g.db
 
