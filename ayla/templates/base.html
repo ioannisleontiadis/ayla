@@ -2,6 +2,9 @@
 <title>Ayla</title>
 <head>
 <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+<link rel="icon" href="{{url_for('static', filename='favicon.ico')}}" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="60x60" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+
 {% block stylesheet %} {% endblock %}
 </head>
 <nav>

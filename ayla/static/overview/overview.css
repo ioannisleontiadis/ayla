@@ -1,0 +1,33 @@
+section#semesters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2em 0;
+    margin-top: 2em;
+    align-items: flex-start;
+}
+
+table.semester {
+    border-collapse: collapse;
+    flex-basis: 44%;
+}
+
+table.semester td {
+    border: 1px solid black;
+    height: 2em;
+}
+
+table.semester td:nth-child(1) {
+    width: 85%;
+    padding-left: 1em;
+}
+
+table.semester td:nth-child(2) {
+    width: 7.5%;
+    text-align: center;
+}
+
+table.semester td:nth-child(3) {
+    width: 7.5%;
+    text-align: center;
+}

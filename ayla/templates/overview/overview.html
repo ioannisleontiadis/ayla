@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='overview/overview.css') }}">
+{% endblock %}
+
+{% block content %}
+<section id="semesters">
+{% for semester in semesters %}
+<table class="semester">
+<tbody>
+{% for course in semester %}
+<tr>
+    <td class="course">{{ course.name }}</td>
+    <td class="coeff">{{ course.coeff }}</td>
+    <td class="grade">{{ course.grade if course.grade else "" }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endfor %}
+</section>
+{% endblock %}
